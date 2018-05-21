@@ -15,5 +15,5 @@ class SessionsController < ApplicationController
     session[:token] = access_token
     redirect root_path
   end
-  
+
 end
