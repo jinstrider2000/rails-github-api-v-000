@@ -17,6 +17,10 @@ class RepositoriesController < ApplicationController
   end
 
   def create
-    resp
+    resp = Faraday.post("https://api.github.com/user/repos") do |req|
+      req.body = {
+        
+      }
+    end
   end
 end
