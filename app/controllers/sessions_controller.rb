@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
     end
     access_token = ActiveSupport::JSON.decode(resp.body)["access_token"]
     session[:token] = access_token
-    redirect root_path
+    redirect_to root_path
   end
 
 end
