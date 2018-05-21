@@ -23,6 +23,6 @@ class RepositoriesController < ApplicationController
       }
       req.body = ActiveSupport::JSON.encode({"name" => params[:name]})
     end
-    render "create"
+    render "index"
   end
 end
