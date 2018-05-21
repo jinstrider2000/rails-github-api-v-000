@@ -6,7 +6,7 @@ class RepositoriesController < ApplicationController
       })
     end
 
-    @username = ActiveSupport::JSON.decode(resp.body)
+    @username = ActiveSupport::JSON.decode(resp.body)["login"]
   end
 
   def create
