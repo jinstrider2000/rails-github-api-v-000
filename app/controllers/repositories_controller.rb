@@ -22,7 +22,7 @@ class RepositoriesController < ApplicationController
         Authorization: "token #{session[:token]}"
       }
       req.body = {
-        "\"name\":\"#{params[:name]}\"" => true
+        "name" => params[:name]
       }
     end
   end
