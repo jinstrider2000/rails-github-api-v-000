@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
         redirect_uri: CGI.escape(oauth_redirect_url)
       })
     end
-    access_token = ActiveSupport::JSON.decode(resp)["access_token"]
+    access_token = ActiveSupport::JSON.decode(resp.body)["access_token"]
     session[:token] = access_token
     redirect root_path
   end
