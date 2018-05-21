@@ -7,7 +7,7 @@ class RepositoriesController < ApplicationController
     end
     body1 = ActiveSupport::JSON.decode(resp1.body)
     @username = body1["login"]
-    
+
     resp2 = Faraday.get("https://api.github.com/user/repos") do |req|
       req.headers = {
         Authorization: "token #{session[:token]}"
