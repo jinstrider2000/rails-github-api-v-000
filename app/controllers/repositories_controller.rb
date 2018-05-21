@@ -21,9 +21,7 @@ class RepositoriesController < ApplicationController
       req.headers = {
         Authorization: "token #{session[:token]}"
       }
-      req.body = {
-        "name" => params[:name]
-      }
+      req.body = ActiveSupport::JSON.encode({"name" => params[:name]})
     end
   end
 end
