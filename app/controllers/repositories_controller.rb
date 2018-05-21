@@ -2,7 +2,7 @@ class RepositoriesController < ApplicationController
   def index
     resp = Faraday.get("https://api.github.com/user") do |req|
       req.headers = {
-        Authorization: session[:token]
+        Authorization: "token #{session[:token]}"
       }
     end
 
